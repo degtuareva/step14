@@ -1,0 +1,181 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+    cursor: url("../images/pngimg.com\ -\ aim_PNG59.png"),crosshair;
+}
+
+@keyframes duckFly{
+	0%{
+        left: -60px;
+        top: 40%;
+    }
+    25%{
+        left: 25%;
+        top: 45%;
+    }
+	50%{
+        left: 80%;
+        top: 70%;
+    }
+    60%{
+        left: 75%;
+        top: 85%;
+    }
+    75%{
+        left: 65%;
+        top: 75%;
+        transform: rotate(180deg);
+    }
+	100% {
+		left: 100%;
+        top: 55%;
+	}
+}
+@keyframes duckFlyTwo{
+	0%{
+        left: -60px;
+        top: 10%;
+    }
+    25%{
+        left: 25%;
+        top: 40%;
+        transform: rotate(360deg);
+    }
+    35%{
+        left: 35%;
+        top: 48%;
+    }
+	50%{
+        left: 50%;
+        top: 550%;
+    }
+    75%{
+        left: 75%;
+        top: 60%;
+    }
+	100% {
+		left: 100%;
+        top: 55%;
+        transform: rotate(360deg);
+	}
+}
+body{
+    height: 100%;
+    cursor: url("../images/pngimg.com\ -\ aim_PNG59.png"),crosshair;
+}
+.map{
+    background-image:url("../img/Games_Duck_Hunt_Nintendo_Dendy_Nes_025749_9.jpg");
+    height: 100vh;
+    background-position: bottom;
+    position: relative;
+    overflow: hidden;
+}
+input[type="checkbox"]{
+    visibility: hidden;
+    left: -9999px;
+    z-index: -5;
+    position: absolute;
+}
+.count{
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    font-family: sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+    transform: translateX(-50%);
+}
+
+.count::after{
+    content: counter(shote);
+}
+
+input[type="checkbox"]:checked{
+    counter-increment: shote;
+}
+
+input[type="checkbox"]:checked + .duck{
+    opacity: 0;
+}
+
+
+.duck{
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/duck_hunt_bird_big2.gif");
+    display: block;
+    position: absolute;
+    left: -60px;
+    opacity: 1;
+    transition: opacity0.5s;
+}
+input[type="checkbox"]:checked{
+    counter-increment:shote;
+}
+input[type="checkbox"]:checked+.duck{
+    opacity: 0;
+}
+
+
+/* input[type="checkbox"]:checked{
+    counter-increment: shote;
+}
+
+input[type="checkbox"]:checked + .duck{
+    opacity: 0;
+} */
+
+/* .count{
+    position: absolute;
+    left: 50%;
+    bottom:20px;
+    font-family:sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    transform: translate(-50%);
+}
+.count::after{
+    content: counter(Shote);
+    position: absolute;
+    left: 50%;
+    bottom: 32px;
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+} */
+.duck1{
+    animation: duckFly 10s ease 5s 1 normal;
+}
+.duck2{
+    animation: duckFly 7s ease 2s 1 normal;
+}
+.duck3{
+    animation: duckFlyTwo 3s ease 4s 1 normal;
+}
+.duck4{
+    animation: duckFly 8s ease 5s 1 normal;
+}
+.duck5{
+    animation: duckFlyTwo 7s ease 6s 1 normal;
+}
+.duck6{
+    animation: duckFly 3s ease 2.5s 1 normal;
+}
+.duck7{
+    animation: duckFly 4s ease 4s 1 normal;
+}
+.duck8{
+    animation: duckFlyTwo 8s ease 8s 1 normal;
+}
+.duck9{
+    animation:duckFlyTwo 5s ease 2s 1 normal;
+}
